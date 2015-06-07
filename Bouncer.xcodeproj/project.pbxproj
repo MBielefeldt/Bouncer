@@ -13,6 +13,7 @@
 		08DBFC411B24330900FE219A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08DBFC401B24330900FE219A /* Images.xcassets */; };
 		08DBFC441B24330900FE219A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08DBFC421B24330900FE219A /* LaunchScreen.xib */; };
 		08DBFC501B24330900FE219A /* BouncerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DBFC4F1B24330900FE219A /* BouncerTests.swift */; };
+		08DBFC5A1B2433F200FE219A /* BouncerBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DBFC591B2433F200FE219A /* BouncerBehavior.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		08DBFC491B24330900FE219A /* BouncerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BouncerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08DBFC4E1B24330900FE219A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08DBFC4F1B24330900FE219A /* BouncerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BouncerTests.swift; sourceTree = "<group>"; };
+		08DBFC591B2433F200FE219A /* BouncerBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BouncerBehavior.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,9 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				08DBFC3D1B24330900FE219A /* Main.storyboard */,
-				08DBFC391B24330900FE219A /* AppDelegate.swift */,
+				08DBFC591B2433F200FE219A /* BouncerBehavior.swift */,
 				08DBFC3B1B24330900FE219A /* ViewController.swift */,
-				08DBFC401B24330900FE219A /* Images.xcassets */,
 				08DBFC371B24330900FE219A /* Supporting Files */,
 			);
 			path = Bouncer;
@@ -89,6 +90,8 @@
 		08DBFC371B24330900FE219A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				08DBFC401B24330900FE219A /* Images.xcassets */,
+				08DBFC391B24330900FE219A /* AppDelegate.swift */,
 				08DBFC421B24330900FE219A /* LaunchScreen.xib */,
 				08DBFC381B24330900FE219A /* Info.plist */,
 			);
@@ -214,6 +217,7 @@
 			files = (
 				08DBFC3C1B24330900FE219A /* ViewController.swift in Sources */,
 				08DBFC3A1B24330900FE219A /* AppDelegate.swift in Sources */,
+				08DBFC5A1B2433F200FE219A /* BouncerBehavior.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
