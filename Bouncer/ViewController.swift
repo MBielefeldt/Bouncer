@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController
 {
-    let bouncher = BouncerBehavior()
+    let bouncer = BouncerBehavior()
     
     lazy var animator: UIDynamicAnimator = {
         UIDynamicAnimator(referenceView: self.view)
@@ -20,7 +20,7 @@ class ViewController: UIViewController
     {
         super.viewDidLoad()
         
-        animator.addBehavior(bouncher)
+        animator.addBehavior(bouncer)
     }
     
     var redBlock: UIView?
@@ -37,6 +37,8 @@ class ViewController: UIViewController
         return block
     }
     
+    let motionManager = AppDelegate.Motion.Manager
+    
     override func viewWillAppear(animated: Bool)
     {
         super.viewWillAppear(animated)
@@ -44,7 +46,22 @@ class ViewController: UIViewController
         if redBlock == nil {
             redBlock = addBlock()
             redBlock!.backgroundColor = UIColor.redColor()
-            bouncher.addBlock(redBlock!)
+            bouncer.addBlock(redBlock!)
+        }
+        
+        if motionManager.accelerometerAvailable {
+            motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.mainQueue()) { (accelerometerData, _) in
+                self.bouncer.gravity.gravityDirection = CGVector(dx: accelerometerData.acceleration.x, dy: -accelerometerData.acceleration.y)
+            }
+        }
+    }
+    
+    override func viewWillDisappear(animated: Bool)
+    {
+        super.viewWillDisappear(animated)
+        
+        if motionManager.accelerometerAvailable {
+            motionManager.stopAccelerometerUpdates()
         }
     }
 }
